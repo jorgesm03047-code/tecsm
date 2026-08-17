@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap');
+
+:root {
+  /* Brand Gradient */
+  --brand-turq: #00B4D8;
+  --brand-cobalt: #0077B6;
+  --brand-indigo: #4F46E5;
+  --brand-gradient: linear-gradient(135deg, var(--brand-turq), var(--brand-cobalt), var(--brand-indigo));
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+
+  /* Shadows & Transitions */
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
+  --shadow-glow: 0 0 20px rgba(0, 180, 216, 0.3);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Mode Variables */
+:root, [data-theme='light'] {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --bg-glass: rgba(255, 255, 255, 0.7);
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --border-glass: 1px solid #E2E8F0;
+  --bg-card: #FFFFFF;
+}
+
+/* Dark Mode Variables */
+[data-theme='dark'] {
+  --bg-primary: #070B14;
+  --bg-secondary: #0F172A;
+  --bg-glass: rgba(15, 23, 42, 0.7);
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border-glass: 1px solid rgba(248, 250, 252, 0.1);
+  --bg-card: rgba(15, 23, 42, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: var(--transition-smooth);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.text-gradient {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-panel {
+  background: var(--bg-glass);
+  /* Removed backdrop-filter for scroll performance */
+  border: var(--border-glass);
+  box-shadow: var(--shadow-soft);
+}
+
+.button-primary {
+  background: var(--brand-gradient);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}

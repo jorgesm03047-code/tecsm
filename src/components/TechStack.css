@@ -1,0 +1,49 @@
+.tech-stack-section {
+  padding: 6rem 0;
+  position: relative;
+  z-index: 10;
+  background: var(--bg-secondary);
+}
+
+.stack-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.stack-header .section-title {
+  margin-bottom: 1rem;
+}
+
+.stack-header .section-subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.stack-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.stack-item:hover {
+  background: rgba(0, 180, 216, 0.05);
+}
+
+.stack-icon {
+  color: var(--brand-turq);
+}
+
+.stack-name {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
