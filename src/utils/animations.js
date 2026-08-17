@@ -2,11 +2,11 @@
 export const awwwardsEasing = [0.16, 1, 0.3, 1];
 
 export const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 30 },
   visible: { 
     opacity: 1, 
     y: 0, 
-    transition: { duration: 1, ease: awwwardsEasing } 
+    transition: { duration: 0.5, ease: awwwardsEasing } 
   }
 };
 
@@ -31,15 +31,15 @@ export const staggerContainer = {
 };
 
 export const pageTransition = {
-  initial: { opacity: 0, y: 20 },
+  initial: { opacity: 0, y: 12 },
   animate: { 
     opacity: 1, 
     y: 0, 
-    transition: { duration: 0.8, ease: awwwardsEasing }
+    transition: { duration: 0.3, ease: awwwardsEasing }
   },
   exit: { 
     opacity: 0, 
-    y: -20, 
-    transition: { duration: 0.5, ease: awwwardsEasing }
+    y: -12, 
+    transition: { duration: 0.2, ease: awwwardsEasing }
   }
 };
