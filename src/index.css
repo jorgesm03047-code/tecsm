@@ -17,19 +17,8 @@
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Light Mode Variables */
-:root, [data-theme='light'] {
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F8FAFC;
-  --bg-glass: rgba(255, 255, 255, 0.7);
-  --text-primary: #0F172A;
-  --text-secondary: #64748B;
-  --border-glass: 1px solid #E2E8F0;
-  --bg-card: #FFFFFF;
-}
-
-/* Dark Mode Variables */
-[data-theme='dark'] {
+/* Base / Dark Mode Variables by default */
+:root, [data-theme='dark'] {
   --bg-primary: #070B14;
   --bg-secondary: #0F172A;
   --bg-glass: rgba(15, 23, 42, 0.7);
@@ -37,6 +26,17 @@
   --text-secondary: #94A3B8;
   --border-glass: 1px solid rgba(248, 250, 252, 0.1);
   --bg-card: rgba(15, 23, 42, 0.5);
+}
+
+/* Light Mode Variables */
+[data-theme='light'] {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --bg-glass: rgba(255, 255, 255, 0.7);
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --border-glass: 1px solid #E2E8F0;
+  --bg-card: #FFFFFF;
 }
 
 html {
@@ -53,10 +53,12 @@ body {
   font-family: var(--font-sans);
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  transition: var(--transition-smooth);
+  transition: background-color 0.2s ease, color 0.2s ease;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1, h2, h3, h4, h5, h6, .font-display {
